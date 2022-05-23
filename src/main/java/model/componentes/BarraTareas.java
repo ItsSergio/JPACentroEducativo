@@ -9,6 +9,7 @@ import javax.swing.JToolBar;
 import model.cacheyConexion.CacheImagenes;
 import model.vistas.PanelAJDialog;
 import model.vistas.Ventana_Curso;
+import model.vistas.Ventana_Materia;
 
 
 
@@ -27,14 +28,14 @@ public class BarraTareas extends JToolBar{
 			}
 		}));
 		this.addSeparator();
-//		this.add(creaBoton("Materias", "conectando.gif", "Materias", new ActionListener() {
-//			
-//			@Override
-//			public void actionPerformed(ActionEvent e) {
-//				
-//				PanelAJDialog.meterPanelEnJDialog("JDialogMateria", new Ventana_Materia());
-//			}
-//		}));
+		this.add(creaBoton("Materias", "conectando.gif", "Materias", new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				PanelAJDialog.meterPanelEnJDialog("JDialogMateria", new Ventana_Materia());
+			}
+		}));
 //		this.addSeparator();
 //		this.add(creaBoton("Estudiantes", "conectando.gif", "Estudiantes", new ActionListener() {
 //					

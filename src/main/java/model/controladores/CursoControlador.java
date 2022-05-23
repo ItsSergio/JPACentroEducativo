@@ -1,9 +1,12 @@
 package model.controladores;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import model.beans.Curso;
 import model.beans.Entidad;
@@ -58,6 +61,24 @@ public class CursoControlador extends SuperControlador{
 		
 		em.close();
 		return c;
+	}
+	
+	public static List<Curso> listadoEntidadesSegundoMetodo () {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("JPACentroEducativo");
+		
+		EntityManager em = entityManagerFactory.createEntityManager();
+		
+		TypedQuery<Curso> q = em.createQuery("SELECT c FROM Curso c", Curso.class);
+		
+		List<Curso> cursos = (List<Curso>) q.getResultList();
+		
+		for (Curso curso : cursos) {
+			System.out.println("Curso: " + curso.getId() + " Descripción: " + curso.getDescripcion());
+		}
+		
+		em.close();
+		
+		return cursos;
 	}
 	
 	

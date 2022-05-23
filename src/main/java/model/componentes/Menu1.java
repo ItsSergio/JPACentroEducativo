@@ -13,6 +13,7 @@ import javax.swing.KeyStroke;
 import model.cacheyConexion.CacheImagenes;
 import model.vistas.PanelAJDialog;
 import model.vistas.Ventana_Curso;
+import model.vistas.Ventana_Materia;
 
 
 
@@ -29,14 +30,14 @@ public class Menu1 extends JMenuBar{
 				
 			}
 		}));
-//		menuDeArchivo.add(crearNuevoMenuItem("Materias", "conectando.gif", KeyStroke.getKeyStroke(KeyEvent.VK_B, Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()), new ActionListener() {
-//			
-//			@Override
-//			public void actionPerformed(ActionEvent e) {
-//				PanelAJDialog.meterPanelEnJDialog("JDialogMateria", new Ventana_Materia());
-//				
-//			}
-//		}));
+		menuDeArchivo.add(crearNuevoMenuItem("Materias", "conectando.gif", KeyStroke.getKeyStroke(KeyEvent.VK_B, Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()), new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				PanelAJDialog.meterPanelEnJDialog("JDialogMateria", new Ventana_Materia());
+				
+			}
+		}));
 //		menuDeArchivo.add(crearNuevoMenuItem("Estudiantes", "conectando.gif", KeyStroke.getKeyStroke(KeyEvent.VK_F, Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()), new ActionListener() {
 //					
 //			@Override
